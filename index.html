@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#171713">
+  <meta name="description" content="Твоя совятня в Хогвартсе — чаты, преподаватели и школьные тайны.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Hogwarts — Твоя совятня</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top">
+      <div class="brand">✦ HOGWARTS <span>DARK ACADEMIA · SCHOOL OF MAGIC</span></div>
+      <div class="headline"><div><small id="welcome">ДОБРО ПОЖАЛОВАТЬ</small><h1>Твоя совятня</h1><p id="subline">Письма, тайны и разговоры за стенами замка.</p></div><div class="crest">H</div></div>
+    </header>
+    <nav class="tabs" id="tabs">
+      <button data-tab="chats" class="active">Чаты</button><button data-tab="people">Ученики</button><button data-tab="teachers">Учителя</button><button data-tab="story">Сюжет</button><button data-tab="events">События</button><button data-tab="profile">Профиль</button>
+    </nav>
+    <main id="view" class="view"></main>
+    <footer><span>✦</span> HOGWARTS · YOUR STORY CONTINUES <span>✦</span></footer>
+  </div>
+  <dialog id="chatDialog" class="chat-dialog">
+    <div class="chat-head"><button class="back" id="closeChat">←</button><div><b id="chatTitle"></b><small id="chatDesc"></small></div><button id="clearChat" class="quiet">Очистить</button></div>
+    <div id="messages" class="messages"></div>
+    <form id="sendForm" class="composer"><input id="draft" autocomplete="off" placeholder="Написать письмо…" maxlength="1200"><button type="submit">➤</button></form>
+  </dialog>
+  <dialog id="createDialog">
+    <form id="createForm" class="modal-form">
+      <div class="modal-title"><span>НОВАЯ СОВЯТНЯ</span><button type="button" class="back" id="closeCreate">✕</button></div>
+      <label>Название чата<input id="groupName" required maxlength="50" placeholder="Например, Тайный клуб библиотеки"></label>
+      <label>Описание<input id="groupDesc" maxlength="100" placeholder="О чём будет этот чат?"></label>
+      <label>Участники <small>Можно выбрать несколько</small></label>
+      <div id="memberChoices" class="member-choices"></div>
+      <button class="primary" type="submit">Создать групповой чат</button>
+    </form>
+  </dialog>
+  <dialog id="installDialog"><div class="modal-form"><div class="modal-title">УСТАНОВКА</div><p>Добавь Hogwarts на главный экран, чтобы открывать его как приложение.</p><button id="installConfirm" class="primary">Установить приложение</button><button id="installClose" class="secondary">Позже</button></div></dialog>
+  <script src="./app.js"></script>
+</body>
+</html>
