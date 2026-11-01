@@ -1,6 +1,6 @@
-const CACHE='hogwarts-pwa-v2';
+const CACHE='hogwarts-pwa-v3';
 const ASSETS=[
-  './','./index.html','./styles.css','./app.js','./manifest.json',
+  './','./index.html','./styles.css','./app.js','./manifest-v2.json',
   './icon-192.png','./icon-512.png','./icon-maskable-512.png'
 ];
 self.addEventListener('install',event=>{
